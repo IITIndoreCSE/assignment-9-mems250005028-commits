@@ -10,20 +10,17 @@ struct Color {
 int main() {
     Color colors[5];
 
-    // User input for 5 colors
     for(int i = 0; i < 5; ++i) {
         cout << "Enter red, green, and blue values for color " << (i + 1) << " (0-255): ";
         cin >> colors[i].red >> colors[i].green >> colors[i].blue;
     }
 
-    // Invert the first 3 colors
     for(int i = 0; i < 3; ++i) {
         colors[i].red = 255 - colors[i].red;
         colors[i].green = 255 - colors[i].green;
         colors[i].blue = 255 - colors[i].blue;
     }
 
-    // Display all colors with new values
     cout << "\nUpdated colors:\n";
     for(int i = 0; i < 5; ++i) {
         cout << "Color " << (i + 1) << ": (" << colors[i].red << ", "
